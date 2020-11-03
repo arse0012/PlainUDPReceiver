@@ -10,7 +10,7 @@ namespace PlainUDPReceiver
             receiver.Start();
 
 
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
         }
     }
 }

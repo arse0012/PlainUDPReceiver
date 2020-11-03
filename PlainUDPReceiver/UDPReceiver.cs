@@ -15,19 +15,19 @@ namespace PlainUDPReceiver
         }
         public void Start()
         {
-            UdpClient client = new UdpClient();
+            UdpClient client = new UdpClient(11001);
             Car car = new Car("Tesla", "Red","EL3421");
 
             byte[] buffer;
             
-            // Modtager
+            // Sender
             IPEndPoint modtagerEP = new IPEndPoint(IPAddress.Loopback, 11001);
             string str = car.ToString();
             byte[] outbuffer = Encoding.UTF8.GetBytes(str.ToCharArray());
             client.Send(outbuffer, outbuffer.Length, modtagerEP);
 
 
-            // Sender
+            // Modtager
             IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
             buffer = client.Receive(ref remoteEP);
 
