@@ -15,7 +15,7 @@ namespace PlainUDPReceiver
         }
         public void Start()
         {
-            UdpClient client = new UdpClient(11001);
+            UdpClient client = new UdpClient();
             Car car = new Car("Tesla", "Red","EL3421");
 
             byte[] buffer;

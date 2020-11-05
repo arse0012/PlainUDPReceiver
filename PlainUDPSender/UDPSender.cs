@@ -12,7 +12,7 @@ namespace PlainUDPSender
         public void Start()
         {
             Car car1 = new Car("Tesla", "red","EL23400");
-            UdpClient socket = new UdpClient("Localhost", 11001);
+            UdpClient socket = new UdpClient(11001);
             IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
             byte[] buffer = socket.Receive(ref remoteEP);
 

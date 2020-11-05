@@ -9,7 +9,7 @@ namespace PlainUDPReceiver
             UDPReceiver receiver = new UDPReceiver();
             receiver.Start();
 
-
+            Console.ReadLine();
             //Console.WriteLine("Hello World!");
         }
     }
